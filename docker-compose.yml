@@ -1,0 +1,12 @@
+# docker-compose.yml
+version: '3'
+services:
+  database:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=flyway
+      - DB_HOST=docker.for.win.localhost
